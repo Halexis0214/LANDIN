@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirPods Pro (3ª Generación) - Réplica 1:1 Premium</title>
+    
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        🚚 ENVIÓ GRATIS Y PAGO CONTRAENTREGA EN COLOMBIA - PAGA AL RECIBIR 🎉
+    </div>
+
+    <nav class="navbar">
+        <div class="logo-area">
+            <img src="logo.png" alt="Accesorios Prestige HQ" class="brand-logo">
+            <span>ACCESORIOS PRESTIGE HQ</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#reseñas">Reseñas (250+)</a></li>
+            <li><a href="#pedido-formulario" class="nav-btn">PEDIR AHORA</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        
+        <section class="product-showcase" id="caracteristicas">
+            <span class="badge-premium">RÉPLICA 1:1 PREMIUM DE ALTA CALIDAD</span>
+            <h1 class="product-title">AirPods Pro (3ª Generación)</h1>
+            <p class="product-subtitle">Experiencia Acústica de Última Generación</p>
+            
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="airpods-1.png" alt="AirPods Pro 3ra Gen" class="slide active">
+                    <img src="airpods-2.png" alt="Diseño Ergonómico" class="slide">
+                    <img src="airpods-3.png" alt="Contenido de la caja" class="slide">
+                    <img src="airpods-4.png" alt="Duración de batería" class="slide">
+                    <img src="airpods-5.jpg" alt="Cancelación Activa de Ruido" class="slide">
+                    <img src="airpods-6.jpg" alt="Ajuste seguro rediseñado" class="slide">
+                </div>
+                
+                <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+                
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <strong>Cancelación de Ruido</strong>
+                        <span>Aislamiento acústico optimizado ambiental.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <strong>Batería de larga duración</strong>
+                        <span>Hasta 5 horas continuas + 25 horas de estuche.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <strong>Audio Espacial Real</strong>
+                        <span>Inmersión total en 360 grados en tu música.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <strong>GPS Localizador</strong>
+                        <span>Rastreo mediante la App oficial "Buscar".</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="checkout-box" id="pedido-formulario">
+            <div class="checkout-header">
+                <h2>PIDE TU ENVÍO GRATIS</h2>
+                <div class="shipping-badge">Pago Contraentrega (Pagas al recibir)</div>
+                <div class="price-tag">
+                    <span class="price-old">$299.900</span>
+                    <span class="price-now">$159.900 COP</span>
+                </div>
+            </div>
+
+            <form id="orderForm">
+                <div class="form-grid">
+                    
+                    <div class="input-wrapper form-group-full">
+                        <span class="input-icon">👤</span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido Completo" required>
+                    </div>
+
+                    <div class="input-wrapper form-group-full">
+                        <span class="input-icon">📞</span>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Número de Celular" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <span class="input-icon">📍</span>
+                        <input type="text" id="departamento" name="departamento" placeholder="Departamento" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <span class="input-icon">🏙️</span>
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad / Municipio" required>
+                    </div>
+
+                    <div class="input-wrapper form-group-full">
+                        <span class="input-icon">🏠</span>
+                        <input type="text" id="direccion" name="direccion" placeholder="Dirección Exacta (Casa, Apto, Barrio)" required>
+                    </div>
+
+                    <div class="input-wrapper form-group-full">
+                        <span class="input-icon">📦</span>
+                        <select id="cantidad" name="cantidad">
+                            <option value="1">1 Unidad — $159.900 COP</option>
+                            <option value="2">2 Unidades (Ahorra 15%) — $259.900 COP</option>
+                            <option value="3">3 Unidades (Mayorista) — $329.900 COP</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn-submit-order" id="submitBtn">CONFIRMAR MI PEDIDO</button>
+            </form>
+
+            <div class="success-box" id="mensaje-exito">
+                ¡Pedido registrado correctamente! 🎉 Nos comunicaremos contigo de inmediato por WhatsApp para coordinar la entrega en tu casa.
+            </div>
+
+            <div class="trust-badges">
+                <div class="trust-item"><span class="icon">🔒</span> Datos Seguros</div>
+                <div class="trust-item"><span class="icon">🤝</span> Sin Anticipos</div>
+                <div class="trust-item"><span class="icon">📦</span> Revisión al Recibir</div>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="reviews-section" id="reseñas">
+        <div class="section-header">
+            <h2>Reseñas de Clientes Satisfechos</h2>
+            <div class="rating-overview">
+                <span class="stars-global">★★★★★</span>
+                <span><strong>4.8 / 5</strong> basado en más de 250 entregas</span>
+            </div>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-top">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">JP</div>
+                        <div>
+                            <span class="reviewer-name">Juan Pérez</span>
+                            <span class="reviewer-status">✓ Comprador Verificado (Medellín)</span>
+                        </div>
+                    </div>
+                    <div class="stars-rating">★★★★★</div>
+                    <p class="review-text">¡Impresionantes! Son idénticos a los originales de un amigo, el estuche pesa igual y los materiales se sienten premium. El sonido y los bajos superaron mis expectativas. El envío a Medellín fue súper rápido, llegó al día siguiente.</p>
+                </div>
+                <div class="review-date">Hace 2 días</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-top">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">MR</div>
+                        <div>
+                            <span class="reviewer-name">María Rodríguez</span>
+                            <span class="reviewer-status">✓ Comprador Verificado (Bogotá)</span>
+                        </div>
+                    </div>
+                    <div class="stars-rating">★★★★★</div>
+                    <p class="review-text">Tenía miedo de que no funcionara en mi iPhone pero los reconoció con la animación original de Apple enseguida. El audio espacial funciona genial y la batería me dura unas 5 horas seguidas de música. Pagué en efectivo cuando me llegaron.</p>
+                </div>
+                <div class="review-date">Hace 4 días</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-top">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">CG</div>
+                        <div>
+                            <span class="reviewer-name">Carlos Gómez</span>
+                            <span class="reviewer-status">✓ Comprador Verificado (Cali)</span>
+                        </div>
+                    </div>
+                    <div class="stars-rating">★★★★☆</div>
+                    <p class="review-text">Muy buenos audífonos por este precio, el sonido es súper limpio y nítido. Le doy 4 estrellas solo porque la transportadora se demoró un día más de lo pactado, pero el vendedor estuvo súper pendiente por WhatsApp ayudándome a rastrearlo todo el tiempo.</p>
+                </div>
+                <div class="review-date">Hace una semana</div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-top">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">LC</div>
+                        <div>
+                            <span class="reviewer-name">Laura Castro</span>
+                            <span class="reviewer-status">✓ Comprador Verificado (Barranquilla)</span>
+                        </div>
+                    </div>
+                    <div class="stars-rating">★★★★★</div>
+                    <p class="review-text">Excelente calidad 1:1, la caja viene contramarcada perfectamente. El GPS integrado funciona perfecto, los pude enlazar en la App "Buscar" de mi celular por si se me pierden. Muy recomendados, compraré otros para regalo.</p>
+                </div>
+                <div class="review-date">Hace 12 días</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
