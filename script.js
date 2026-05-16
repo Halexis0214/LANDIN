@@ -29,9 +29,16 @@ document.addEventListener("DOMContentLoaded", function() {
     showSlide(currentSlideIndex);
 });
 
+// ==========================================================================
+// 2. LÓGICA DE PREGUNTAS FRECUENTES (ACORDEÓN)
+// ==========================================================================
+function toggleFaq(element) {
+    const faqItem = element.parentElement;
+    faqItem.classList.toggle('active');
+}
 
 // ==========================================================================
-// 2. PROCESAMIENTO DEL FORMULARIO Y ENVÍO A GOOGLE SHEETS
+// 3. PROCESAMIENTO DEL FORMULARIO Y ENVÍO A GOOGLE SHEETS
 // ==========================================================================
 document.getElementById('orderForm').addEventListener('submit', function(e) {
     e.preventDefault(); 
@@ -43,8 +50,6 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     submitBtn.disabled = true;
 
     const formData = new FormData(this);
-    
-    // URL de tu Script de Google Sheets enlazada perfectamente
     const URL_DE_TU_SCRIPT = "https://script.google.com/macros/s/AKfycbwcgIQ7DIn_NyGux8hzZivfezeWzXdoHV-qPD4eNMv0CrhvhMUsWufaLA5UOb7TA7mN/exec"; 
 
     fetch(URL_DE_TU_SCRIPT, {
