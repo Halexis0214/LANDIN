@@ -23,7 +23,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Barra de Alerta superior - AHORA FIJA */
+/* Barra de Alerta superior - FIJA */
 .top-bar {
     background: linear-gradient(90deg, #fd0707 0%, #333336 100%);
     color: #ffffff;
@@ -32,27 +32,30 @@ body {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    
-    /* Código nuevo para fijarla */
     position: sticky;
     top: 0;
-    z-index: 101; /* Un nivel más arriba que el menú */
+    z-index: 101;
 }
 
-/* Barra de Navegación - AHORA AJUSTADA */
+/* Barra de Navegación adaptable */
 .navbar {
     background-color: rgb(14, 13, 13);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 4px 40px;
+    padding: 8px 15px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     position: sticky;
-    top: 35px; /* <- Cambiado de 0 a 35px para que ruede debajo de la barra negra */
+    top: 35px; 
     z-index: 100;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        padding: 4px 40px;
+    }
 }
 
 .logo-area {
@@ -60,29 +63,52 @@ body {
     align-items: center;
     gap: 12px;
     font-weight: 700;
-    font-size: 19px;
+    font-size: 16px;
     color: var(--text-dark);
 }
 
-/* ESTILO DEL LOGO PREMIUM NUEVO */
+@media (min-width: 576px) {
+    .logo-area {
+        font-size: 19px;
+    }
+}
+
 .brand-logo {
-    height: 90px; /* Ajuste óptico perfecto para tu logo */
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
 
+@media (min-width: 768px) {
+    .brand-logo {
+        height: 90px;
+    }
+}
+
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 12px;
     list-style: none;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        gap: 25px;
+    }
 }
 
 .nav-links a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     transition: color 0.2s;
+}
+
+@media (min-width: 768px) {
+    .nav-links a {
+        font-size: 14px;
+    }
 }
 
 .nav-links a:hover {
@@ -92,32 +118,39 @@ body {
 .nav-btn {
     background-color: var(--primary-blue);
     color: white !important;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 20px;
     font-weight: 600 !important;
     transition: background 0.2s;
+}
+
+@media (min-width: 768px) {
+    .nav-btn {
+        padding: 8px 16px;
+    }
 }
 
 .nav-btn:hover {
     background-color: var(--primary-hover);
 }
 
-/* Contenedor Principal de Dos Columnas */
+/* Contenedor Principal (Celular: 1 Columna, PC: 2 Columnas) */
 .main-container {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 20px auto;
+    padding: 0 15px;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 25px;
     align-items: start;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 993px) {
     .main-container {
-        grid-template-columns: 1fr;
-        margin: 20px auto;
-        gap: 30px;
+        grid-template-columns: 1.2fr 1fr;
+        margin: 40px auto;
+        padding: 0 20px;
+        gap: 40px;
     }
 }
 
@@ -125,9 +158,15 @@ body {
 .product-showcase {
     background: #ffffff;
     border-radius: 24px;
-    padding: 40px;
+    padding: 25px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .product-showcase {
+        padding: 40px;
+    }
 }
 
 .badge-premium {
@@ -136,15 +175,21 @@ body {
     color: #1d1d1f;
     padding: 6px 14px;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
+@media (min-width: 768px) {
+    .badge-premium {
+        font-size: 13px;
+    }
+}
+
 .product-title {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.5px;
@@ -154,20 +199,31 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.product-subtitle {
-    font-size: 18px;
-    color: var(--primary-blue);
-    font-weight: 600;
-    margin-bottom: 25px;
+@media (min-width: 768px) {
+    .product-title {
+        font-size: 36px;
+    }
 }
 
-/* ==========================================================================
-   NUEVO BLOQUE: ESTILOS DEL CARRUSEL DE IMÁGENES INTERACTIVO
-   ========================================================================== */
+.product-subtitle {
+    font-size: 15px;
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .product-subtitle {
+        font-size: 18px;
+    }
+}
+
+/* Carrusel de Imágenes Responsivo */
 .slider-container {
     position: relative;
+    width: 100%;
     max-width: 420px;
-    margin: 20px auto;
+    margin: 15px auto;
     overflow: hidden;
     border-radius: 16px;
     background-color: #ffffff;
@@ -176,10 +232,16 @@ body {
 .slider {
     position: relative;
     width: 100%;
-    height: 380px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .slider {
+        height: 380px;
+    }
 }
 
 .slide {
@@ -197,7 +259,6 @@ body {
     pointer-events: auto;
 }
 
-/* Botones de Flechas del Carrusel */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -207,10 +268,10 @@ body {
     -webkit-backdrop-filter: blur(4px);
     color: #1d1d1f;
     border: 1px solid rgba(0,0,0,0.08);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -220,28 +281,35 @@ body {
     z-index: 10;
 }
 
+@media (min-width: 768px) {
+    .slider-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+}
+
 .slider-btn:hover {
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.prev-btn { left: 15px; }
-.next-btn { right: 15px; }
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
 
-/* Puntos Indicadores Inferiores */
 .slider-dots {
     position: absolute;
-    bottom: 15px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 8px;
+    gap: 6px;
     z-index: 10;
 }
 
 .dot {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -250,23 +318,23 @@ body {
 
 .dot.active {
     background-color: var(--primary-blue);
-    width: 18px;
+    width: 16px;
     border-radius: 4px;
 }
-/* ========================================================================== */
 
-/* Características con iconos */
+/* Características en lista */
 .features-list {
     text-align: left;
-    margin-top: 35px;
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 15px;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 577px) {
     .features-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
 }
 
@@ -302,27 +370,41 @@ body {
     color: var(--text-muted);
 }
 
-/* Columna Derecha: Formulario Moderno */
+/* Caja de Pedido Adaptable */
 .checkout-box {
     background: #ffffff;
     border-radius: 24px;
-    padding: 35px;
+    padding: 22px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(0, 71, 227, 0.08);
-    position: sticky;
-    top: 140px; /* Ajustado para que ruede bien debajo del navbar negro fijo */
+    position: relative;
+    top: 0;
+}
+
+@media (min-width: 993px) {
+    .checkout-box {
+        padding: 35px;
+        position: sticky;
+        top: 140px; 
+    }
 }
 
 .checkout-header {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: black;
 }
 
 .checkout-header h2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+    .checkout-header h2 {
+        font-size: 22px;
+    }
 }
 
 .price-tag {
@@ -330,17 +412,23 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin: 15px 0;
+    margin: 12px 0;
 }
 
 .price-now {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 800;
     color: #d01345;
 }
 
+@media (min-width: 768px) {
+    .price-now {
+        font-size: 30px;
+    }
+}
+
 .price-old {
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: line-through;
     color: var(--text-muted);
 }
@@ -351,15 +439,14 @@ body {
     color: #2e7d32;
     padding: 4px 12px;
     border-radius: 12px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
 }
 
-/* Grid de Inputs */
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 12px;
 }
 
 @media (max-width: 576px) {
@@ -380,16 +467,16 @@ body {
 
 .input-wrapper {
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .input-wrapper input, .input-wrapper select {
     width: 100%;
-    padding: 14px 14px 14px 40px;
+    padding: 13px 13px 13px 38px;
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    font-size: 15px;
-    color: #1d1d1f; /* Corregido: Letra oscura dentro de los campos para que se pueda leer bien */
+    font-size: 14px;
+    color: #1d1d1f; 
     background-color: #fbfbfd;
     transition: all 0.2s;
     outline: none;
@@ -398,7 +485,7 @@ body {
 }
 
 .input-wrapper select {
-    padding-right: 40px;
+    padding-right: 38px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231d1d1f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: calc(100% - 15px) center;
@@ -412,11 +499,11 @@ body {
 
 .input-icon {
     position: absolute;
-    left: 14px;
+    left: 13px;
     top: 50%;
     transform: translateY(-50%);
     color: #86868b;
-    font-size: 16px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -428,12 +515,12 @@ body {
     background: linear-gradient(180deg, #34c759 0%, #28a745 100%);
     color: white;
     border: none;
-    padding: 16px;
-    font-size: 16px;
+    padding: 15px;
+    font-size: 15px;
     font-weight: 700;
     border-radius: 12px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 10px;
     box-shadow: 0 4px 15px rgba(52, 199, 89, 0.3);
     transition: all 0.2s;
 }
@@ -449,12 +536,11 @@ body {
     cursor: not-allowed;
 }
 
-/* Sellos de Confianza */
 .trust-badges {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 12px;
+    margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid #f2f2f7;
 }
@@ -462,60 +548,60 @@ body {
 .trust-item {
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-size: 12px;
+    gap: 5px;
+    font-size: 11px;
     font-weight: 600;
     color: #6e6e73;
 }
 
 .trust-item span.icon {
     color: #28a745;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 /* Sección de Reseñas */
 .reviews-section {
     max-width: 1200px;
-    margin: 60px auto 40px auto;
-    padding: 0 20px;
+    margin: 40px auto;
+    padding: 0 15px;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #1d1d1f;
 }
 
 .section-header h2 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .rating-overview {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-size: 16px;
+    gap: 8px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .stars-global {
     color: #ffb300;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .review-card {
     background: #ffffff;
     border-radius: 18px;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.02);
     border: 1px solid rgba(0,0,0,0.02);
     display: flex;
@@ -524,7 +610,7 @@ body {
 }
 
 .review-top {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .reviewer-info {
@@ -535,20 +621,20 @@ body {
 }
 
 .reviewer-avatar {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     background-color: #e8e8ed;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    color: #1d1d1f; /* Ajustado el  avatar del cliente para leer las iniciales en negro */
-    font-size: 14px;
+    color: #1d1d1f; 
+    font-size: 13px;
 }
 
 .reviewer-name {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: black;
 }
@@ -562,39 +648,32 @@ body {
 
 .stars-rating {
     color: #ffb300;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 8px;
 }
 
 .review-text {
-    font-size: 14px;
+    font-size: 13.5px;
     line-height: 1.5;
     color: #333336;
 }
 
 .review-date {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-muted);
-    margin-top: 15px;
+    margin-top: 12px;
     text-align: right;
 }
 
-/* Mensaje Éxito */
 .success-box {
     display: none;
     background-color: #e8f5e9;
     border: 1px solid #c8e6c9;
     color: #2e7d32;
-    padding: 20px;
+    padding: 15px;
     border-radius: 12px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
     font-weight: 600;
+    font-size: 14px;
 }
-
-
-
-
-
-
-
