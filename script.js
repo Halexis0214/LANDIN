@@ -50,7 +50,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     submitBtn.disabled = true;
 
     const formData = new FormData(this);
-    const URL_DE_TU_SCRIPT = "https://script.google.com/macros/s/AKfycbwcgIQ7DIn_NyGux8hzZivfezeWzXdoHV-qPD4eNMv0CrhvhMUsWufaLA5UOb7TA7mN/exec"; 
+    const URL_DE_TU_SCRIPT = "https://script.google.com/macros/s/AKfycbwbYTec7gGVD-aDkvrLTjrzOJoJSL1gSjAZxvbR5SbcGPzh4JXVGcIHZ99rC8y9-D0C/exec"; 
 
     fetch(URL_DE_TU_SCRIPT, {
         method: 'POST',
