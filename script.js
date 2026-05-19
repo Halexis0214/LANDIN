@@ -52,7 +52,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     const formData = new FormData(this);
     
     // ⚠️ PEGA AQUÍ TU URL ACTUAL DE GOOGLE APPS SCRIPT (La que termina en /exec)
-    const URL_DE_TU_SCRIPT = "https://script.google.com/macros/s/AKfycbyaY0ifSaD8-uVL9mqgusFIgyIFhtiuRiSaiiYCvBk0s_XLZPqYRA2J5uYjeDXRpM3e/exec"; 
+    const URL_DE_TU_SCRIPT = "https://script.google.com/macros/s/AKfycbwy7CDlXczhJnvLy7-rQCUi1nzbu45dM99qIJbFFfV8aDSwzN3BIQBPhBNhckaDrT8/exec"; 
 
     fetch(URL_DE_TU_SCRIPT, {
         method: 'POST',
