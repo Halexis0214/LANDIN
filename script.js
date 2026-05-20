@@ -58,21 +58,13 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
-    .then(data => {
-        // Al terminar con éxito, restablecemos el botón y mostramos el mensaje al cliente
-        submitBtn.innerText = "CONFIRMAR MI PEDIDO";
-        submitBtn.disabled = false;
-        mensajeExito.style.display = "block";
-        document.getElementById('orderForm').reset();
-        mensajeExito.scrollIntoView({ behavior: 'smooth' });
+    .then(response => {
+        // Redirige automáticamente al cliente a la página de gracias al terminar el envío
+        window.location.href = "gracias.html"; 
     })
     .catch(error => {
         console.error('Error de conexión:', error);
-        // Si hay error de red, igual liberamos el formulario por experiencia de usuario
-        submitBtn.innerText = "CONFIRMAR MI PEDIDO";
-        submitBtn.disabled = false;
-        mensajeExito.style.display = "block";
-        document.getElementById('orderForm').reset();
+        // Si hay un error de red, igual lo mandamos a gracias para no dañar su experiencia
+        window.location.href = "gracias.html";
     });
 });
